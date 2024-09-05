@@ -14,6 +14,7 @@
 		0D1ADE8F2C89C2CA00B253AE /* redux_archTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADE8E2C89C2CA00B253AE /* redux_archTests.swift */; };
 		0D1ADE992C89C2CA00B253AE /* redux_archUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADE982C89C2CA00B253AE /* redux_archUITests.swift */; };
 		0D1ADE9B2C89C2CA00B253AE /* redux_archUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADE9A2C89C2CA00B253AE /* redux_archUITestsLaunchTests.swift */; };
+		0D1ADEA92C89C33A00B253AE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADEA82C89C33A00B253AE /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0D1ADE942C89C2CA00B253AE /* redux-archUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "redux-archUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1ADE982C89C2CA00B253AE /* redux_archUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redux_archUITests.swift; sourceTree = "<group>"; };
 		0D1ADE9A2C89C2CA00B253AE /* redux_archUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redux_archUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D1ADEA82C89C33A00B253AE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		0D1ADE7C2C89C2C700B253AE /* redux-arch */ = {
 			isa = PBXGroup;
 			children = (
+				0D1ADEA72C89C2E200B253AE /* Store */,
 				0D1ADE7D2C89C2C700B253AE /* redux_archApp.swift */,
 				0D1ADE7F2C89C2C700B253AE /* ContentView.swift */,
 				0D1ADE812C89C2CA00B253AE /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				0D1ADE9A2C89C2CA00B253AE /* redux_archUITestsLaunchTests.swift */,
 			);
 			path = "redux-archUITests";
+			sourceTree = "<group>";
+		};
+		0D1ADEA72C89C2E200B253AE /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				0D1ADEA82C89C33A00B253AE /* Store.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1ADEA92C89C33A00B253AE /* Store.swift in Sources */,
 				0D1ADE802C89C2C700B253AE /* ContentView.swift in Sources */,
 				0D1ADE7E2C89C2C700B253AE /* redux_archApp.swift in Sources */,
 			);
