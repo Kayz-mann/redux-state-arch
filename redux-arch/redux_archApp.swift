@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct redux_archApp: App {
-    let store =  Store(reducer: appReducer, state: AppState())
+    let store =  Store<AppState>(reducer: appReducer, state: AppState(), middlewares: [logMiddleWare()])
     
     var body: some Scene {
         WindowGroup {

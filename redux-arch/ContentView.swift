@@ -32,6 +32,11 @@ struct ContentView: View {
                 props.onAdd(100)
             }.padding()
             
+            Button("Increment Async") {
+                props.onIncrementAsync()
+            }.padding()
+
+            
             Spacer()
             
             Button("Add Task") {
@@ -49,6 +54,7 @@ struct ContentView: View {
         let onIncrement: () -> Void
         let onDecrement: () -> Void
         let onAdd: (Int) -> Void
+        let onIncrementAsync: () -> Void
     }
     
     
@@ -61,6 +67,9 @@ struct ContentView: View {
                 store.dispatch(action: DecrementAction())
         }, onAdd: {
             store.dispatch(action: AddAction(value: $0))
+        },
+              onIncrementAsync: {
+            store.dispatch(action: IncrementActionAsync())
         }
         )
     }
