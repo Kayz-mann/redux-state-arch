@@ -8,44 +8,40 @@
 import Foundation
 import Combine
 
-typealias Reducer = (_ state: State, _ action: Action) -> State
+typealias Reducer<State: ReduxState> = (_ state: State, _ action: Action) -> State
 
-struct State {
-    var counter: Int  =  0
+protocol ReduxState {}
+
+struct AppState: ReduxState {
+    var counterState =  CounterState()
+    var taskState =  TaskState()
 }
 
-protocol Action{}
+struct TaskState: ReduxState {
+    var tasks: [Task] = [Task]()
+}
+
+struct CounterState: ReduxState {
+    var counter = 0
+}
+
+protocol Action {}
 
 struct IncrementAction: Action {}
 struct DecrementAction: Action {}
+struct AddTaskAction: Action {
+    let task: Task
+}
 
 struct AddAction: Action {
     let value: Int
 }
 
-//update state
-func reducer(_ state: State, _ action: Action) -> State {
-    var state =  state
+class Store<StoreState: ReduxState> : ObservableObject {
+    private let reducer: Reducer<StoreState>
+    @Published var state: StoreState
     
-    switch action {
-    case _ as IncrementAction:
-        state.counter += 1
-    case _ as DecrementAction:
-        state.counter -= 1
-    case let action as AddAction:
-        state.counter += action.value
-    default:
-        break
-    }
-    
-    return state
-}
-
-class Store: ObservableObject {
-    private let reducer: Reducer
-    @Published var state: State
-    
-    init(reducer: @escaping Reducer, state: State = State()) {
+    init(reducer: @escaping Reducer<StoreState>, state: StoreState) {
         self.reducer = reducer
         self.state = state
     }

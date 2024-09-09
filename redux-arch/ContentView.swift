@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var store: Store
+    @State private var isPresented: Bool = false
+    @EnvironmentObject var store: Store<AppState>
     
     private var props: Props {
-        map(state: store.state)
+        map(state: store.state.counterState)
     }
     
     var body: some View {
@@ -30,8 +31,17 @@ struct ContentView: View {
             Button("Add") {
                 props.onAdd(100)
             }.padding()
+            
+            Spacer()
+            
+            Button("Add Task") {
+                isPresented =  true
+            }
+            Spacer()
 
-        }
+        }.sheet(isPresented: $isPresented, content: {
+           AddTaskView()
+        })
     }
     
     private struct Props {
@@ -42,8 +52,8 @@ struct ContentView: View {
     }
     
     
-    private func map(state: State) -> Props {
-        Props(counter: state.counter, 
+    private func map(state: CounterState) -> Props {
+        Props(counter: state.counter,
             onIncrement: {
                 store.dispatch(action: IncrementAction())
             },

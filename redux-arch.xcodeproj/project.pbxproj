@@ -15,6 +15,11 @@
 		0D1ADE992C89C2CA00B253AE /* redux_archUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADE982C89C2CA00B253AE /* redux_archUITests.swift */; };
 		0D1ADE9B2C89C2CA00B253AE /* redux_archUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADE9A2C89C2CA00B253AE /* redux_archUITestsLaunchTests.swift */; };
 		0D1ADEA92C89C33A00B253AE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADEA82C89C33A00B253AE /* Store.swift */; };
+		0D31E62E2C8EFF4700E7863E /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E62D2C8EFF4700E7863E /* CounterReducer.swift */; };
+		0D31E6302C8EFFA700E7863E /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E62F2C8EFFA700E7863E /* AppReducer.swift */; };
+		0D31E6342C8F061000E7863E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6332C8F061000E7863E /* Task.swift */; };
+		0D31E6362C8F075700E7863E /* TaskReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6352C8F075700E7863E /* TaskReducer.swift */; };
+		0D31E6382C8F1D5400E7863E /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6372C8F1D5400E7863E /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		0D1ADE982C89C2CA00B253AE /* redux_archUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redux_archUITests.swift; sourceTree = "<group>"; };
 		0D1ADE9A2C89C2CA00B253AE /* redux_archUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redux_archUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0D1ADEA82C89C33A00B253AE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		0D31E62D2C8EFF4700E7863E /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		0D31E62F2C8EFFA700E7863E /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		0D31E6332C8F061000E7863E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		0D31E6352C8F075700E7863E /* TaskReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReducer.swift; sourceTree = "<group>"; };
+		0D31E6372C8F1D5400E7863E /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +106,13 @@
 		0D1ADE7C2C89C2C700B253AE /* redux-arch */ = {
 			isa = PBXGroup;
 			children = (
+				0D31E6312C8F05F300E7863E /* Shared */,
 				0D1ADEA72C89C2E200B253AE /* Store */,
 				0D1ADE7D2C89C2C700B253AE /* redux_archApp.swift */,
 				0D1ADE7F2C89C2C700B253AE /* ContentView.swift */,
 				0D1ADE812C89C2CA00B253AE /* Assets.xcassets */,
 				0D1ADE832C89C2CA00B253AE /* Preview Content */,
+				0D31E6372C8F1D5400E7863E /* AddTaskView.swift */,
 			);
 			path = "redux-arch";
 			sourceTree = "<group>";
@@ -133,9 +145,36 @@
 		0D1ADEA72C89C2E200B253AE /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				0D31E62C2C8EFF0100E7863E /* reducers */,
 				0D1ADEA82C89C33A00B253AE /* Store.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		0D31E62C2C8EFF0100E7863E /* reducers */ = {
+			isa = PBXGroup;
+			children = (
+				0D31E62D2C8EFF4700E7863E /* CounterReducer.swift */,
+				0D31E62F2C8EFFA700E7863E /* AppReducer.swift */,
+				0D31E6352C8F075700E7863E /* TaskReducer.swift */,
+			);
+			path = reducers;
+			sourceTree = "<group>";
+		};
+		0D31E6312C8F05F300E7863E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0D31E6322C8F05F900E7863E /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0D31E6322C8F05F900E7863E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D31E6332C8F061000E7863E /* Task.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D1ADEA92C89C33A00B253AE /* Store.swift in Sources */,
+				0D31E62E2C8EFF4700E7863E /* CounterReducer.swift in Sources */,
 				0D1ADE802C89C2C700B253AE /* ContentView.swift in Sources */,
+				0D31E6382C8F1D5400E7863E /* AddTaskView.swift in Sources */,
 				0D1ADE7E2C89C2C700B253AE /* redux_archApp.swift in Sources */,
+				0D31E6362C8F075700E7863E /* TaskReducer.swift in Sources */,
+				0D31E6342C8F061000E7863E /* Task.swift in Sources */,
+				0D31E6302C8EFFA700E7863E /* AppReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
