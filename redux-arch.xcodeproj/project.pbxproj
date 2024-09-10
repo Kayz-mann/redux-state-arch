@@ -22,6 +22,14 @@
 		0D31E6382C8F1D5400E7863E /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6372C8F1D5400E7863E /* AddTaskView.swift */; };
 		0D31E63B2C8F291600E7863E /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E63A2C8F291600E7863E /* LogMiddleware.swift */; };
 		0D31E63D2C8F351400E7863E /* IncrementMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E63C2C8F351400E7863E /* IncrementMiddleware.swift */; };
+		0D31E6402C8F3DA900E7863E /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E63F2C8F3DA900E7863E /* View+Extensions.swift */; };
+		0D31E6422C8F3E0B00E7863E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6412C8F3E0B00E7863E /* String+Extensions.swift */; };
+		0D31E6442C8F436400E7863E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6432C8F436400E7863E /* Movie.swift */; };
+		0D31E6472C8F450000E7863E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6462C8F450000E7863E /* WebService.swift */; };
+		0D31E6492C8F90CF00E7863E /* MoviesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6482C8F90CF00E7863E /* MoviesReducer.swift */; };
+		0D31E64B2C8FC4C400E7863E /* MoviesMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E64A2C8FC4C400E7863E /* MoviesMiddleware.swift */; };
+		0D31E64D2C8FC6B200E7863E /* env.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0D31E64C2C8FC6B200E7863E /* env.xcconfig */; };
+		0D31E6512C9062D300E7863E /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31E6502C9062D300E7863E /* MovieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,14 @@
 		0D31E6372C8F1D5400E7863E /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		0D31E63A2C8F291600E7863E /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 		0D31E63C2C8F351400E7863E /* IncrementMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementMiddleware.swift; sourceTree = "<group>"; };
+		0D31E63F2C8F3DA900E7863E /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		0D31E6412C8F3E0B00E7863E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0D31E6432C8F436400E7863E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0D31E6462C8F450000E7863E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		0D31E6482C8F90CF00E7863E /* MoviesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesReducer.swift; sourceTree = "<group>"; };
+		0D31E64A2C8FC4C400E7863E /* MoviesMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesMiddleware.swift; sourceTree = "<group>"; };
+		0D31E64C2C8FC6B200E7863E /* env.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = env.xcconfig; sourceTree = "<group>"; };
+		0D31E6502C9062D300E7863E /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,13 +126,16 @@
 		0D1ADE7C2C89C2C700B253AE /* redux-arch */ = {
 			isa = PBXGroup;
 			children = (
+				0D31E63E2C8F3D9300E7863E /* Extensions */,
 				0D31E6312C8F05F300E7863E /* Shared */,
 				0D1ADEA72C89C2E200B253AE /* Store */,
 				0D1ADE7D2C89C2C700B253AE /* redux_archApp.swift */,
 				0D1ADE7F2C89C2C700B253AE /* ContentView.swift */,
+				0D31E6502C9062D300E7863E /* MovieView.swift */,
 				0D1ADE812C89C2CA00B253AE /* Assets.xcassets */,
 				0D1ADE832C89C2CA00B253AE /* Preview Content */,
 				0D31E6372C8F1D5400E7863E /* AddTaskView.swift */,
+				0D31E64C2C8FC6B200E7863E /* env.xcconfig */,
 			);
 			path = "redux-arch";
 			sourceTree = "<group>";
@@ -162,6 +181,7 @@
 				0D31E62D2C8EFF4700E7863E /* CounterReducer.swift */,
 				0D31E62F2C8EFFA700E7863E /* AppReducer.swift */,
 				0D31E6352C8F075700E7863E /* TaskReducer.swift */,
+				0D31E6482C8F90CF00E7863E /* MoviesReducer.swift */,
 			);
 			path = reducers;
 			sourceTree = "<group>";
@@ -169,6 +189,7 @@
 		0D31E6312C8F05F300E7863E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0D31E6452C8F44E800E7863E /* Services */,
 				0D31E6322C8F05F900E7863E /* Models */,
 			);
 			path = Shared;
@@ -178,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				0D31E6332C8F061000E7863E /* Task.swift */,
+				0D31E6432C8F436400E7863E /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,8 +209,26 @@
 			children = (
 				0D31E63A2C8F291600E7863E /* LogMiddleware.swift */,
 				0D31E63C2C8F351400E7863E /* IncrementMiddleware.swift */,
+				0D31E64A2C8FC4C400E7863E /* MoviesMiddleware.swift */,
 			);
 			path = middlewares;
+			sourceTree = "<group>";
+		};
+		0D31E63E2C8F3D9300E7863E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D31E63F2C8F3DA900E7863E /* View+Extensions.swift */,
+				0D31E6412C8F3E0B00E7863E /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0D31E6452C8F44E800E7863E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0D31E6462C8F450000E7863E /* WebService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +337,7 @@
 			files = (
 				0D1ADE852C89C2CA00B253AE /* Preview Assets.xcassets in Resources */,
 				0D1ADE822C89C2CA00B253AE /* Assets.xcassets in Resources */,
+				0D31E64D2C8FC6B200E7863E /* env.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,14 +364,21 @@
 			files = (
 				0D1ADEA92C89C33A00B253AE /* Store.swift in Sources */,
 				0D31E62E2C8EFF4700E7863E /* CounterReducer.swift in Sources */,
+				0D31E64B2C8FC4C400E7863E /* MoviesMiddleware.swift in Sources */,
+				0D31E6472C8F450000E7863E /* WebService.swift in Sources */,
+				0D31E6402C8F3DA900E7863E /* View+Extensions.swift in Sources */,
 				0D1ADE802C89C2C700B253AE /* ContentView.swift in Sources */,
+				0D31E6422C8F3E0B00E7863E /* String+Extensions.swift in Sources */,
 				0D31E6382C8F1D5400E7863E /* AddTaskView.swift in Sources */,
 				0D1ADE7E2C89C2C700B253AE /* redux_archApp.swift in Sources */,
 				0D31E6362C8F075700E7863E /* TaskReducer.swift in Sources */,
+				0D31E6442C8F436400E7863E /* Movie.swift in Sources */,
 				0D31E6342C8F061000E7863E /* Task.swift in Sources */,
 				0D31E6302C8EFFA700E7863E /* AppReducer.swift in Sources */,
 				0D31E63B2C8F291600E7863E /* LogMiddleware.swift in Sources */,
 				0D31E63D2C8F351400E7863E /* IncrementMiddleware.swift in Sources */,
+				0D31E6492C8F90CF00E7863E /* MoviesReducer.swift in Sources */,
+				0D31E6512C9062D300E7863E /* MovieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
