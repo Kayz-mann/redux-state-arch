@@ -13,8 +13,8 @@ struct redux_archApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            MovieView()
+            ContentView()
+//            MovieView()
                 .environmentObject(store)
         }
     }
